@@ -41,8 +41,10 @@ bloom-and-buttercream/
 ├── js/
 │   └── main.js           ← all interactions (vanilla JS, no dependencies)
 ├── assets/
-│   ├── logo-mark.svg     ← the bloom/rosette logo icon
-│   └── favicon.svg       ← browser-tab icon
+│   ├── logo.png          ← header logo (navy horizontal lockup)
+│   ├── logo-footer.png   ← footer logo (cream, on the navy footer)
+│   ├── brand-source/     ← all brand logo variants (navy / cream / black)
+│   └── favicon.png       ← browser-tab icon (cake + roses emblem)
 ├── images/
 │   ├── ph-*.svg          ← tasteful placeholder images (swap for real photos)
 │   └── README-images.md  ← how to swap in photos
