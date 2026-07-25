@@ -582,6 +582,7 @@ figcaption.ph-note {
   transform: translateY(-4px);
   box-shadow: 0 10px 22px rgba(200, 169, 106, 0.35);
 }
+.step__num svg { width: 1.8rem; height: 1.8rem; }
 .step h4 { margin-bottom: 0.35rem; }
 .step p { color: var(--navy-soft); font-size: 0.96rem; }
 /* Gold dashed connector linking the four steps (only when they sit in one row) */
