@@ -255,9 +255,9 @@ p:last-child { margin-bottom: 0; }
 
 .nav {
   display: flex;
-  flex-direction: column;      /* centered crest layout: logo on top, nav below */
   align-items: center;
-  gap: clamp(0.5rem, 1.4vw, 1rem);
+  justify-content: space-between;
+  gap: 1.5rem;
 }
 
 .brand {
@@ -267,30 +267,25 @@ p:last-child { margin-bottom: 0; }
   line-height: 1;
 }
 /* Brand logo (stacked lockup PNG, transparent). Navy on cream, cream over dark hero. */
-.brand__logo { height: 104px; width: auto; display: block; flex: none; transition: height 0.4s var(--ease), opacity 0.3s var(--ease); }
+/* Header uses the horizontal lockup; footer keeps the stacked crest. */
+.brand__logo { height: 54px; width: auto; display: block; flex: none; transition: height 0.4s var(--ease), opacity 0.3s var(--ease); }
 .brand:hover .brand__logo { opacity: 0.82; }
 .brand__logo--light { display: none; }
 /* Over a full-bleed photo hero (page top): swap to the cream logo */
 .has-hero .site-header:not(.is-scrolled) .brand__logo--dark { display: none; }
 .has-hero .site-header:not(.is-scrolled) .brand__logo--light { display: block; }
 /* Condense once the header sticks on scroll */
-.site-header.is-scrolled .brand__logo { height: 64px; }
-/* Footer sits on navy — the cream logo, generous */
+.site-header.is-scrolled .brand__logo { height: 44px; }
+/* Footer keeps the stacked crest logo, generous */
 .site-footer .brand__logo { height: 118px; }
-@media (max-width: 860px) {
-  .brand__logo { height: 76px; }
-  .site-header.is-scrolled .brand__logo { height: 56px; }
-}
 @media (max-width: 600px) {
-  .brand__logo, .site-header.is-scrolled .brand__logo { height: 58px; }
+  .brand__logo, .site-header.is-scrolled .brand__logo { height: 40px; }
   .site-footer .brand__logo { height: 92px; }
 }
 
 .nav-links {
   display: flex;
   align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
   gap: clamp(1rem, 2vw, 1.9rem);
   list-style: none;
 }
