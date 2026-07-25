@@ -229,8 +229,8 @@ p:last-child { margin-bottom: 0; }
   top: 0;
   z-index: 100;
   background: rgba(250, 246, 239, 0);
-  transition: background 0.4s var(--ease), box-shadow 0.4s var(--ease),
-              padding 0.4s var(--ease);
+  transition: background 0.55s var(--ease), box-shadow 0.55s var(--ease),
+              padding 0.45s var(--ease);
   padding-block: clamp(0.35rem, 1vw, 0.7rem);
 }
 /* Softens on scroll (toggled by JS) */
@@ -257,40 +257,41 @@ p:last-child { margin-bottom: 0; }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1.25rem;
+  gap: 1rem;
 }
 
 .brand {
+  position: relative;      /* lets the two logo colours crossfade in place */
   display: inline-flex;
   align-items: center;
-  gap: 0.7rem;
   line-height: 1;
 }
+.brand:hover { opacity: 0.85; transition: opacity 0.3s var(--ease); }
 /* Brand logo (stacked lockup PNG, transparent). Navy on cream, cream over dark hero. */
 /* Header uses the horizontal lockup (prominent); footer keeps the stacked crest. */
-.brand__logo { height: 64px; width: auto; display: block; flex: none; transition: height 0.4s var(--ease), opacity 0.3s var(--ease); }
-.brand:hover .brand__logo { opacity: 0.82; }
-.brand__logo--light { display: none; }
-/* Over a full-bleed photo hero (page top): swap to the cream logo */
-.has-hero .site-header:not(.is-scrolled) .brand__logo--dark { display: none; }
-.has-hero .site-header:not(.is-scrolled) .brand__logo--light { display: block; }
+.brand__logo { display: block; height: 86px; width: auto; flex: none; transition: opacity 0.5s var(--ease), height 0.4s var(--ease); }
+.brand__logo--dark { opacity: 1; }
+/* the cream logo sits exactly on top and fades in over photo heroes */
+.brand__logo--light { position: absolute; left: 0; top: 0; height: 100%; width: auto; opacity: 0; pointer-events: none; }
+.has-hero .site-header:not(.is-scrolled) .brand__logo--dark { opacity: 0; }
+.has-hero .site-header:not(.is-scrolled) .brand__logo--light { opacity: 1; }
 /* Condense a touch once the header sticks on scroll */
-.site-header.is-scrolled .brand__logo { height: 54px; }
+.site-header.is-scrolled .brand__logo { height: 64px; }
 /* Footer keeps the stacked crest logo, generous */
 .site-footer .brand__logo { height: 118px; }
 @media (max-width: 600px) {
-  .brand__logo { height: 50px; }
-  .site-header.is-scrolled .brand__logo { height: 44px; }
+  .brand__logo { height: 56px; }
+  .site-header.is-scrolled .brand__logo { height: 48px; }
   .site-footer .brand__logo { height: 92px; }
 }
 
 .nav-links {
   display: flex;
   align-items: center;
-  gap: clamp(0.85rem, 1.5vw, 1.5rem);
+  gap: clamp(0.65rem, 1.1vw, 1.15rem);
   list-style: none;
 }
-.nav-links > li > a { white-space: nowrap; }
+.nav-links > li > a { white-space: nowrap; transition: color 0.5s var(--ease); }
 .nav-links a {
   font-size: 0.95rem;
   font-weight: 600;
