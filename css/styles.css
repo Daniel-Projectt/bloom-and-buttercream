@@ -650,20 +650,21 @@ figcaption.ph-note {
   padding: clamp(2.75rem, 6vw, 5rem) clamp(1.5rem, 5vw, 4rem);
   box-shadow: var(--shadow-md), inset 0 0 0 1px rgba(200, 169, 106, 0.30); /* subtle gold inner frame */
 }
-/* the complete logo symbol (cake + roses), centred as a soft watermark */
-.cta-band::before {
+/* two small COMPLETE logo symbols (cake + roses), one on each side */
+.cta-band::before,
+.cta-band::after {
   content: "";
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: clamp(190px, 30vw, 320px);
-  height: clamp(180px, 28vw, 300px);
-  background: url("../assets/emblem-cream.png") no-repeat center / contain;
-  opacity: 0.1;
+  bottom: clamp(12px, 2.2vw, 24px);
   z-index: 0;
+  width: clamp(80px, 11vw, 130px);
+  height: clamp(74px, 10vw, 122px);
+  background: url("../assets/emblem-cream.png") no-repeat center / contain;
+  opacity: 0.14;
   pointer-events: none;
 }
+.cta-band::before { left: clamp(14px, 3vw, 48px); }
+.cta-band::after { right: clamp(14px, 3vw, 48px); }
 .cta-band > * { position: relative; z-index: 1; }
 .cta-band h2 { color: var(--cream); }
 .cta-band .eyebrow { color: var(--gold); }
