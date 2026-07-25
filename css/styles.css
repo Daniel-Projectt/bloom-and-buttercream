@@ -56,7 +56,7 @@
 
   --container: 1200px;
   --gutter:    clamp(1.25rem, 4vw, 3rem);
-  --section-y: clamp(3.5rem, 7vw, 7rem);
+  --section-y: clamp(4rem, 10vw, 8rem);
   --radius:    18px;
   --radius-lg: 26px;
 
@@ -155,7 +155,22 @@ p:last-child { margin-bottom: 0; }
   color: var(--gold-deep);
   margin: 0 0 1.1rem;
 }
-.eyebrow--center { display: block; text-align: center; }
+/* Centered eyebrows get delicate flanking gold hairlines */
+.eyebrow--center,
+.section-head .eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.85rem;
+  text-align: center;
+}
+.eyebrow--center::before, .eyebrow--center::after,
+.section-head .eyebrow::before, .section-head .eyebrow::after {
+  content: "";
+  width: clamp(18px, 4vw, 34px);
+  height: 1px;
+  background: var(--gold);
+  opacity: 0.9;
+}
 
 .text-center { text-align: center; }
 .measure { max-width: 62ch; }
@@ -225,6 +240,18 @@ p:last-child { margin-bottom: 0; }
   box-shadow: 0 1px 0 var(--line), var(--shadow-sm);
   padding-block: 0.6rem;
 }
+
+/* Pages with a full-bleed photo hero: light nav + soft scrim while at the top,
+   so navigation stays legible over the image. Reverts to dark once scrolled. */
+.has-hero .site-header:not(.is-scrolled) {
+  background: linear-gradient(180deg, rgba(31, 45, 61, 0.42), rgba(31, 45, 61, 0));
+}
+.has-hero .site-header:not(.is-scrolled) .brand__name,
+.has-hero .site-header:not(.is-scrolled) .nav-links > li > a { color: var(--cream); }
+.has-hero .site-header:not(.is-scrolled) .nav-links a[aria-current="page"] { color: var(--baby-blue); }
+.has-hero .site-header:not(.is-scrolled) .nav-toggle { color: var(--cream); }
+/* keep the gold CTA button readable */
+.has-hero .site-header:not(.is-scrolled) .nav-links .btn { color: var(--navy); }
 
 .nav {
   display: flex;
@@ -360,9 +387,9 @@ p:last-child { margin-bottom: 0; }
    ------------------------------------------------------------------- */
 .hero {
   position: relative;
-  min-height: min(92vh, 860px);
+  min-height: min(90vh, 840px);
   display: grid;
-  align-items: center;
+  align-items: end; /* sit the headline in the lower third, clear of the header */
   overflow: hidden;
   isolation: isolate;
 }
@@ -373,8 +400,8 @@ p:last-child { margin-bottom: 0; }
   content: "";
   position: absolute; inset: 0; z-index: -1;
   background:
-    linear-gradient(180deg, rgba(31,45,61,0.10) 0%, rgba(31,45,61,0.42) 100%),
-    linear-gradient(90deg, rgba(31,45,61,0.34), rgba(31,45,61,0.05));
+    linear-gradient(180deg, rgba(31,45,61,0.28) 0%, rgba(31,45,61,0.30) 45%, rgba(31,45,61,0.66) 100%),
+    linear-gradient(90deg, rgba(31,45,61,0.48), rgba(31,45,61,0.04) 62%);
 }
 .hero__inner { padding-block: clamp(5rem, 12vw, 8rem); color: var(--cream); max-width: 760px; }
 .hero__inner .eyebrow { color: var(--baby-blue); }
@@ -447,6 +474,7 @@ p:last-child { margin-bottom: 0; }
 /* Feature card (services trio on home) */
 .feature {
   position: relative;
+  isolation: isolate; /* contain the -z-index image + overlay within the card */
   border-radius: var(--radius-lg);
   overflow: hidden;
   min-height: 440px;
@@ -462,13 +490,15 @@ p:last-child { margin-bottom: 0; }
 }
 .feature::after {
   content: ""; position: absolute; inset: 0; z-index: -1;
-  background: linear-gradient(180deg, rgba(31,45,61,0) 30%, rgba(31,45,61,0.82) 100%);
+  background: linear-gradient(180deg, rgba(31,45,61,0.12) 0%, rgba(31,45,61,0.55) 52%, rgba(31,45,61,0.90) 100%);
 }
 .feature:hover img { transform: scale(1.05); }
 .feature__body { padding: clamp(1.5rem, 3vw, 2.4rem); }
 .feature__body .card__label { color: var(--baby-blue); }
 .feature h3 { color: var(--cream); margin-bottom: 0.35em; }
 .feature p { color: rgba(250,246,239,0.9); font-size: 0.98rem; margin-bottom: 1.1rem; }
+.feature .link-arrow { color: var(--cream); }
+.feature .link-arrow:hover { color: var(--baby-blue); }
 .feature--signature { outline: 2px solid var(--gold); outline-offset: -2px; }
 .feature__flag {
   position: absolute; top: 1.2rem; left: 1.2rem; z-index: 1;
@@ -517,18 +547,25 @@ figcaption.ph-note {
   background: var(--white);
 }
 
-/* Steps (How it works) */
-.steps { counter-reset: step; }
-.step { position: relative; padding-top: 1.6rem; }
+/* Steps (How it works) — remove default <ol> numbering; number sits in a gold ring */
+.steps { list-style: none; }
+.steps > li { list-style: none; }
+.step { position: relative; padding-top: 0.25rem; }
 .step__num {
+  display: grid;
+  place-items: center;
+  width: 3.4rem;
+  height: 3.4rem;
+  border-radius: 50%;
+  border: 1.5px solid var(--gold);
+  background: rgba(200, 169, 106, 0.12);
+  color: var(--gold-deep);
   font-family: var(--font-display);
-  font-size: var(--step-3);
-  color: var(--gold);
+  font-size: 1.45rem;
   line-height: 1;
-  display: block;
-  margin-bottom: 0.4rem;
+  margin-bottom: 1.1rem;
 }
-.step h4 { margin-bottom: 0.3rem; }
+.step h4 { margin-bottom: 0.35rem; }
 .step p { color: var(--navy-soft); font-size: 0.96rem; }
 
 /* Testimonials */
@@ -668,6 +705,8 @@ figcaption.ph-note {
   background: var(--powder);
 }
 .tile img { width: 100%; transition: transform 0.9s var(--ease); }
+/* Preview / event tiles that declare a fixed aspect-ratio inline should crop to fill */
+.tile[style*="aspect-ratio"] img { height: 100%; object-fit: cover; }
 .tile::after {
   content: "";
   position: absolute; inset: 0;
@@ -819,6 +858,9 @@ figcaption.ph-note {
   }
   .nav-links.is-open { transform: translateX(0); }
   .nav-links a { font-size: 1.15rem; }
+  /* On mobile the nav is a cream drawer — keep its links dark even on has-hero pages */
+  .has-hero .site-header:not(.is-scrolled) .nav-links > li > a { color: var(--navy); }
+  .has-hero .site-header:not(.is-scrolled) .nav-links a[aria-current="page"] { color: var(--gold-deep); }
   .nav-toggle { display: inline-flex; }
   .split { grid-template-columns: 1fr; }
   .split--reverse .split__media { order: 0; }

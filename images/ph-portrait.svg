@@ -1,18 +1,21 @@
-<svg viewBox="0 0 800 960" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder">
+<svg viewBox="0 0 800 960" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Photo of the sisters coming soon">
   <defs>
     <linearGradient id="p" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#EAF2F7"/><stop offset="1" stop-color="#FAF6EF"/>
+      <stop offset="0" stop-color="#EAF2F7"/><stop offset="0.55" stop-color="#FAF6EF"/><stop offset="1" stop-color="#EAD1CE"/>
     </linearGradient>
   </defs>
   <rect width="800" height="960" fill="url(#p)"/>
-  <g fill="none" stroke="#1F2D3D" stroke-opacity="0.5" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" transform="translate(400 470) scale(3.4)">
+  <!-- delicate gold frame -->
+  <rect x="40" y="40" width="720" height="880" rx="10" fill="none" stroke="#C8A96A" stroke-width="2" stroke-dasharray="2 10" stroke-linecap="round"/>
+  <!-- small bloom mark -->
+  <g fill="none" stroke="#1F2D3D" stroke-opacity="0.55" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" transform="translate(400 400) scale(2.2)">
     <path d="M0 0 C -10 -13 -6.5 -29 0 -34 C 6.5 -29 10 -13 0 0 Z" transform="rotate(0)"/>
     <path d="M0 0 C -10 -13 -6.5 -29 0 -34 C 6.5 -29 10 -13 0 0 Z" transform="rotate(72)"/>
     <path d="M0 0 C -10 -13 -6.5 -29 0 -34 C 6.5 -29 10 -13 0 0 Z" transform="rotate(144)"/>
     <path d="M0 0 C -10 -13 -6.5 -29 0 -34 C 6.5 -29 10 -13 0 0 Z" transform="rotate(216)"/>
     <path d="M0 0 C -10 -13 -6.5 -29 0 -34 C 6.5 -29 10 -13 0 0 Z" transform="rotate(288)"/>
-    <path d="M0 6 V 34"/>
-    <path d="M0 18 C -8 18 -14 23 -18 31 C -10 30 -4 26 0 20" stroke="#C8A96A"/>
+    <path d="M-6 6 C -12 6 -18 11 -21 19 C -14 18 -8 14 -5 8" stroke="#C8A96A"/>
   </g>
-  <text x="400" y="850" text-anchor="middle" font-family="Georgia, serif" font-size="30" fill="#1F2D3D" fill-opacity="0.5" letter-spacing="5">A PORTRAIT OF THE SISTERS</text>
+  <text x="400" y="560" text-anchor="middle" font-family="Georgia, serif" font-size="40" fill="#1F2D3D" fill-opacity="0.72" letter-spacing="1" font-style="italic">Photo coming soon</text>
+  <text x="400" y="612" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#1F2D3D" fill-opacity="0.5" letter-spacing="5">A PORTRAIT OF THE SISTERS</text>
 </svg>

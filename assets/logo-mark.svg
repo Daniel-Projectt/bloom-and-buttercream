@@ -1,7 +1,7 @@
 <!-- Bloom & Buttercream — combination mark icon.
      A fine-line bloom whose swirled centre also reads as a piped buttercream rosette,
      flanked by two slender leaves. Navy (#1F2D3D) line-art with a soft-gold (#C8A96A) centre. -->
-<svg viewBox="0 0 100 100" role="img" aria-label="Bloom & Buttercream" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 100 100" width="100" height="100" role="img" aria-label="Bloom &amp; Buttercream" xmlns="http://www.w3.org/2000/svg">
   <g fill="none" stroke="#1F2D3D" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
     <!-- Five outer petals (rotated copies of one teardrop) -->
     <g>

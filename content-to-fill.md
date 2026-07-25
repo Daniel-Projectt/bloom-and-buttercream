@@ -1,7 +1,8 @@
 # Content to fill in ✍️
 
-Everything below is a placeholder in the site right now. Work through the checklist and the site
-is ready to publish. Search each file for the text in `code` to find the exact spot.
+The site now ships with a full visual design **and real, tasteful stock photography** so it looks
+finished. Everything below is what's left to make it truly *yours*. Search each file for the text
+in `code` to find the exact spot.
 
 ---
 
@@ -9,25 +10,25 @@ is ready to publish. Search each file for the text in `code` to find the exact s
 
 - [ ] **Business name** — currently **Bloom &amp; Buttercream**. Keep it, or search `Bloom &amp; Buttercream` to change everywhere.
 - [ ] **Tagline** — currently *"Where sweetness blooms"* (Home hero). Change in `index.html` if you like.
-- [ ] **Email** — replace `hello@bloomandbuttercream.com` everywhere (footer on every page, `contact.html`, and the form's `mailto:` fallback).
+- [ ] **Email** — replace `hello@bloomandbuttercream.com` everywhere (footers, `contact.html`, the email icon, and the form's `mailto:` fallback).
 - [ ] **Phone** — replace `[Add phone number]` and the `tel:+10000000000` link in `contact.html`.
 - [ ] **Service area / city** — replace `[Your City &amp; surrounding area]` (footers + `contact.html`).
 - [ ] **Studio hours** — replace `[Confirm your hours]` in `contact.html`.
-- [ ] **Social links** — replace the `href="#"` on the Instagram / Facebook / Pinterest icons (footers + `contact.html`). Remove any network you don't use.
+- [ ] **Social links** — the footer + contact icons (Instagram, Pinterest, Email) currently point Instagram & Pinterest to `#`. Add your real profile URLs (the Email icon is already wired to your address once you set it above).
 
 ---
 
-## 2. The sisters' story — `about.html`
+## 2. The sisters — `about.html`
 
+- [ ] **Portrait photo** — the "Meet the Sisters" image is an **intentional blank placeholder** ("Photo coming soon"). Drop in a real photo of the two of you: replace `images/ph-portrait.svg` with e.g. `images/sisters.jpg`.
 - [ ] **Sister names** — replace `[Sister One]` and `[Sister Two]`.
-- [ ] **Your story** — replace the two paragraphs marked with `[Add your story here.]`: who you are, how you started, and why you brought cakes and flowers together.
-- [ ] **Portrait photo** — replace `images/ph-portrait.svg` with a real photo of the two of you (see photo list below).
+- [ ] **Your story** — replace the two paragraphs marked `[Add your story here.]`: who you are, how you started, why you brought cakes and flowers together.
 
 ---
 
 ## 3. Testimonials — `index.html`
 
-- [ ] Replace the placeholder quote and `A very happy bride · Placeholder testimonial` with a real client review and name/occasion. (Add more by copying the `.quote` block if you'd like a rotation later.)
+- [ ] Replace the placeholder quote and `A very happy bride · Placeholder testimonial` with a real review and name/occasion.
 
 ---
 
@@ -35,57 +36,36 @@ is ready to publish. Search each file for the text in `code` to find the exact s
 
 All prices are **placeholders from the sample catalogue**. Confirm or change each before publishing:
 
-- [ ] **Cakes &amp; Sweets** (`cakes.html`): Make a Wish, Happily Ever After, The Sweetest Table, Little Darlings, Ooh La La, Sweet Talk, Tiny Treasures, Season's Sweetest.
-- [ ] **Cake flavours** (`cakes.html`): edit the flavour pills to your real menu.
-- [ ] **Floral Design** (`flowers.html`): The Blushing Bride, Her Best Girls, Centre of Attention, The Grand Entrance, Hello Gorgeous, Forget-Me-Not, Season's Darling, Bloom Club, The Corner Office.
-- [ ] **Signature** (`weddings.html`): The Perfect Match, The Dream Day, Sweets &amp; Stems, Let's Dream.
+- [ ] **Cakes &amp; Sweets** (`cakes.html`) · **Cake flavours** pills (`cakes.html`)
+- [ ] **Floral Design** (`flowers.html`)
+- [ ] **Signature** (`weddings.html`)
 
 ---
 
-## 5. Photos to take / provide
+## 5. Photos — real stock now in place, swap for your own work
 
-Each is marked in the HTML with a `<!-- REPLACE: photo of ... -->` comment. See
-`images/README-images.md` for sizes.
+The site ships with licensed Unsplash photos (see `images/CREDITS.md`) as elegant stand-ins.
+When you have photos of **your own** cakes and flowers, swap them in — just replace the file in
+`images/` (keep the same filename) or update the `src` in the page, and refresh the `alt` text.
 
-**Home (`index.html`)**
-- [ ] Hero — a celebration cake beside a fresh arrangement, soft morning light (wide/landscape)
-- [ ] Signature — a matching cake &amp; floral arrangement styled together
-- [ ] Cakes tile · Florals tile · 4 gallery-preview images
+Current photo files (in `images/`):
 
-**About (`about.html`)**
-- [ ] Portrait of the two sisters together
-- [ ] Hands finishing a cake / trimming flowers in the studio
+`hero-home.jpg` · `hero-wedding.jpg` · `cake-tiered-flowers.jpg` · `cake-seminaked.jpg` ·
+`cake-anemone.jpg` · `cake-berries.jpg` · `cake-pink-drip.jpg` · `dessert-table.jpg` ·
+`dessert-abundant.jpg` · `cupcakes.jpg` · `macarons.jpg` · `petit-fours.jpg` · `cookies.jpg` ·
+`bridal-bouquet.jpg` · `bridesmaid-bouquet.jpg` · `bouquet-lush.jpg` · `centerpiece.jpg` ·
+`floral-arch.jpg` · `floral-arch-color.jpg` · `gift-bouquet.jpg` · `flowers-jars.jpg` ·
+`flowers-dried-vase.jpg` · `moodboard-florals.jpg`
 
-**Cakes (`cakes.html`)** — one photo per item
-- [ ] Celebration cake · wedding cake · dessert table · cupcakes · macarons · sugar cookies · petit fours · seasonal treats · a cake-with-matching-flowers shot
-
-**Floral (`flowers.html`)** — one photo per item
-- [ ] Bridal bouquet · bridesmaid bouquets · centerpiece · installation/arch · gift bouquet · sympathy arrangement · seasonal arrangement · subscription bouquet · corporate florals
-
-**Weddings (`weddings.html`)**
-- [ ] Hero (wedding cake + bridal florals) · the 4 signature package photos · a styled tablescape · 3 event-work photos
-
-**Gallery (`gallery.html`)**
-- [ ] 12 of your best photos. Update each tile's `src`, `alt`, `data-full`, `data-caption`, and the `data-cat` (`cakes` / `flowers` / `signature`) so the filters work.
-
-**Social share image**
-- [ ] Replace `images/ph-hero.svg` in every page's `og:image` meta tag with a **1200×630** photo.
+- [ ] (Optional) Replace the `og:image` social-share pictures — each page's `<meta property="og:image">` points to one of the above; a dedicated 1200×630 image looks best when shared.
 
 ---
 
 ## 6. Connect the form
 
 - [ ] Create a Formspree form and paste your endpoint over `YOUR_FORM_ID` in `contact.html`.
-      Full steps are in the **README.md**.
+      Full steps are in **README.md**.
 
 ---
 
-## 7. Optional polish
-
-- [ ] Add a real logo image if you have one (or keep the built-in SVG mark).
-- [ ] Add a Google Map embed or address block to `contact.html` if you have a storefront.
-- [ ] Add more testimonials, an FAQ, or a blog later — the styles are ready to reuse.
-
----
-
-Once the boxes above are checked, you're ready to deploy. 🌸
+Once these are done, you're ready to publish. 🌸
