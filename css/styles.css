@@ -629,6 +629,7 @@ figcaption.ph-note {
 /* CTA band */
 .cta-band {
   position: relative;
+  overflow: hidden;
   text-align: center;
   background:
     radial-gradient(140% 120% at 50% 0%, rgba(191,215,230,0.35), transparent 55%),
@@ -638,6 +639,22 @@ figcaption.ph-note {
   padding: clamp(2.75rem, 6vw, 5rem) clamp(1.5rem, 5vw, 4rem);
   box-shadow: var(--shadow-md), inset 0 0 0 1px rgba(200, 169, 106, 0.30); /* subtle gold inner frame */
 }
+/* soft rose clusters (from the logo) tucked into the bottom corners */
+.cta-band::before,
+.cta-band::after {
+  content: "";
+  position: absolute;
+  bottom: -26px;
+  z-index: 0;
+  width: clamp(140px, 22vw, 240px);
+  height: clamp(85px, 13vw, 145px);
+  background: url("../assets/roses-cream.png") no-repeat center / contain;
+  opacity: 0.16;
+  pointer-events: none;
+}
+.cta-band::before { left: -26px; }
+.cta-band::after { right: -26px; transform: scaleX(-1); }
+.cta-band > * { position: relative; z-index: 1; }
 .cta-band h2 { color: var(--cream); }
 .cta-band .eyebrow { color: var(--gold); }
 .cta-band p { color: rgba(250,246,239,0.88); max-width: 52ch; margin-inline: auto; }
