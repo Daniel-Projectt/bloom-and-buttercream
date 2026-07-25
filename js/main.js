@@ -16,7 +16,18 @@
   var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   /* -----------------------------------------------------------------
-     1. (Header is a single consistent cream style — no scroll behaviour.)
+     1. Sticky header softens on scroll
+     ----------------------------------------------------------------- */
+  var header = document.querySelector(".site-header");
+  if (header) {
+    var onScroll = function () {
+      header.classList.toggle("is-scrolled", window.scrollY > 64);
+    };
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+  }
+
+  /* -----------------------------------------------------------------
      2. Mobile navigation toggle
      ----------------------------------------------------------------- */
   var toggle = document.querySelector(".nav-toggle");
