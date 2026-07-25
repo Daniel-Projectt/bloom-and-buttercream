@@ -557,25 +557,46 @@ figcaption.ph-note {
 }
 
 /* Steps (How it works) — remove default <ol> numbering; number sits in a gold ring */
-.steps { list-style: none; }
+.steps { list-style: none; position: relative; }
 .steps > li { list-style: none; }
-.step { position: relative; padding-top: 0.25rem; }
+.step { position: relative; z-index: 1; padding-top: 0.25rem; }
 .step__num {
   display: grid;
   place-items: center;
-  width: 3.4rem;
-  height: 3.4rem;
+  width: 3.6rem;
+  height: 3.6rem;
   border-radius: 50%;
   border: 1.5px solid var(--gold);
-  background: rgba(200, 169, 106, 0.12);
+  background: var(--cream);          /* solid, so the connector line hides behind it */
   color: var(--gold-deep);
   font-family: var(--font-display);
-  font-size: 1.45rem;
+  font-size: 1.5rem;
   line-height: 1;
   margin-bottom: 1.1rem;
+  transition: background 0.35s var(--ease), color 0.35s var(--ease),
+              transform 0.35s var(--ease), box-shadow 0.35s var(--ease);
+}
+.step:hover .step__num {
+  background: var(--gold);
+  color: var(--navy);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 22px rgba(200, 169, 106, 0.35);
 }
 .step h4 { margin-bottom: 0.35rem; }
 .step p { color: var(--navy-soft); font-size: 0.96rem; }
+/* Gold dashed connector linking the four steps (only when they sit in one row) */
+@media (min-width: 961px) {
+  .steps::before {
+    content: "";
+    position: absolute;
+    top: 2.05rem;            /* vertical centre of the circles */
+    left: 12.5%;
+    right: 12.5%;
+    border-top: 1.5px dashed var(--gold);
+    opacity: 0.5;
+    z-index: 0;
+  }
+}
 
 /* Testimonials */
 .quote {
@@ -606,13 +627,15 @@ figcaption.ph-note {
 
 /* CTA band */
 .cta-band {
+  position: relative;
   text-align: center;
   background:
     radial-gradient(140% 120% at 50% 0%, rgba(191,215,230,0.35), transparent 55%),
     var(--navy);
   color: var(--cream);
   border-radius: var(--radius-lg);
-  padding: clamp(2.5rem, 6vw, 5rem) clamp(1.5rem, 5vw, 4rem);
+  padding: clamp(2.75rem, 6vw, 5rem) clamp(1.5rem, 5vw, 4rem);
+  box-shadow: var(--shadow-md), inset 0 0 0 1px rgba(200, 169, 106, 0.30); /* subtle gold inner frame */
 }
 .cta-band h2 { color: var(--cream); }
 .cta-band .eyebrow { color: var(--gold); }
