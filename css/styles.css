@@ -650,21 +650,20 @@ figcaption.ph-note {
   padding: clamp(2.75rem, 6vw, 5rem) clamp(1.5rem, 5vw, 4rem);
   box-shadow: var(--shadow-md), inset 0 0 0 1px rgba(200, 169, 106, 0.30); /* subtle gold inner frame */
 }
-/* soft, COMPLETE rose clusters (from the logo) resting inside the bottom corners */
-.cta-band::before,
-.cta-band::after {
+/* the complete logo symbol (cake + roses), centred as a soft watermark */
+.cta-band::before {
   content: "";
   position: absolute;
-  bottom: clamp(14px, 2.5vw, 26px);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: clamp(190px, 30vw, 320px);
+  height: clamp(180px, 28vw, 300px);
+  background: url("../assets/emblem-cream.png") no-repeat center / contain;
+  opacity: 0.1;
   z-index: 0;
-  width: clamp(100px, 13vw, 165px);
-  height: clamp(58px, 8vw, 96px);
-  background: url("../assets/roses-cream.png") no-repeat center / contain;
-  opacity: 0.2;
   pointer-events: none;
 }
-.cta-band::before { left: clamp(16px, 3vw, 44px); }
-.cta-band::after { right: clamp(16px, 3vw, 44px); transform: scaleX(-1); }
 .cta-band > * { position: relative; z-index: 1; }
 .cta-band h2 { color: var(--cream); }
 .cta-band .eyebrow { color: var(--gold); }
