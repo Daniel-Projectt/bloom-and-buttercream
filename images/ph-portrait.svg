@@ -1,0 +1,18 @@
+<svg viewBox="0 0 800 960" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder">
+  <defs>
+    <linearGradient id="p" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#EAF2F7"/><stop offset="1" stop-color="#FAF6EF"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="960" fill="url(#p)"/>
+  <g fill="none" stroke="#1F2D3D" stroke-opacity="0.5" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" transform="translate(400 470) scale(3.4)">
+    <path d="M0 0 C -10 -13 -6.5 -29 0 -34 C 6.5 -29 10 -13 0 0 Z" transform="rotate(0)"/>
+    <path d="M0 0 C -10 -13 -6.5 -29 0 -34 C 6.5 -29 10 -13 0 0 Z" transform="rotate(72)"/>
+    <path d="M0 0 C -10 -13 -6.5 -29 0 -34 C 6.5 -29 10 -13 0 0 Z" transform="rotate(144)"/>
+    <path d="M0 0 C -10 -13 -6.5 -29 0 -34 C 6.5 -29 10 -13 0 0 Z" transform="rotate(216)"/>
+    <path d="M0 0 C -10 -13 -6.5 -29 0 -34 C 6.5 -29 10 -13 0 0 Z" transform="rotate(288)"/>
+    <path d="M0 6 V 34"/>
+    <path d="M0 18 C -8 18 -14 23 -18 31 C -10 30 -4 26 0 20" stroke="#C8A96A"/>
+  </g>
+  <text x="400" y="850" text-anchor="middle" font-family="Georgia, serif" font-size="30" fill="#1F2D3D" fill-opacity="0.5" letter-spacing="5">A PORTRAIT OF THE SISTERS</text>
+</svg>

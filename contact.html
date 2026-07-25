@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Start Your Inquiry — Bloom &amp; Buttercream</title>
+  <meta name="description" content="Tell us about your celebration. Inquire about custom cakes, bespoke florals, or both — from one loving, sister-owned studio.">
+  <meta name="theme-color" content="#FAF6EF">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Start Your Inquiry — Bloom & Buttercream">
+  <meta property="og:description" content="Tell us about your celebration — cakes, flowers, or both.">
+  <meta property="og:image" content="images/ph-hero.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Nunito+Sans:wght@300;400;600;700;800&family=Pinyon+Script&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ================= SHARED HEADER ================= -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav" aria-label="Primary">
+        <a class="brand" href="index.html" aria-label="Bloom & Buttercream — home">
+          <img class="brand__mark" src="assets/logo-mark.svg" alt="" width="42" height="42">
+          <span class="brand__name">Bloom <span class="amp">&amp;</span> Buttercream</span>
+        </a>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+        </button>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="cakes.html">Cakes &amp; Sweets</a></li>
+          <li><a href="flowers.html">Floral Design</a></li>
+          <li><a href="weddings.html">Weddings &amp; Events</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a class="btn btn--gold" href="contact.html" aria-current="page">Start your inquiry</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ================= PAGE HERO ================= -->
+    <section class="page-hero">
+      <div class="container container--narrow">
+        <span class="eyebrow" data-reveal>Start your inquiry</span>
+        <h1 data-reveal data-delay="1">Let's plan something <span class="script">beautiful</span></h1>
+        <p class="lede" data-reveal data-delay="2">Tell us a little about your celebration and we'll be in touch soon — usually within two business days.</p>
+      </div>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+    <section class="section" style="padding-top:0">
+      <div class="container">
+        <div class="contact-grid">
+
+          <!-- ============ INQUIRY FORM ============ -->
+          <div class="contact-card" data-reveal>
+            <!--
+              ============================================================
+              FORMSPREE SETUP (required to receive messages)
+              1. Create a free form at https://formspree.io
+              2. Copy your form's endpoint (looks like https://formspree.io/f/abcdwxyz)
+              3. Replace YOUR_FORM_ID below in BOTH the action attribute
+                 and the mailto fallback link at the bottom of this form.
+              Until then, the form falls back to opening the visitor's email app.
+              See the README for full instructions.
+              ============================================================
+            -->
+            <form class="form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
+              <input type="hidden" name="_subject" value="New inquiry from bloomandbuttercream.com">
+              <!-- Honeypot spam trap (leave empty) -->
+              <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
+
+              <div class="form__row">
+                <div class="field">
+                  <label for="name">Your name <span class="req" aria-hidden="true">*</span></label>
+                  <input id="name" name="name" type="text" autocomplete="name" required>
+                </div>
+                <div class="field">
+                  <label for="email">Email <span class="req" aria-hidden="true">*</span></label>
+                  <input id="email" name="email" type="email" autocomplete="email" required>
+                </div>
+              </div>
+
+              <div class="form__row">
+                <div class="field">
+                  <label for="phone">Phone</label>
+                  <input id="phone" name="phone" type="tel" autocomplete="tel">
+                </div>
+                <div class="field">
+                  <label for="date">Event date</label>
+                  <input id="date" name="event_date" type="date">
+                </div>
+              </div>
+
+              <div class="form__row">
+                <div class="field">
+                  <label for="service">What can we make for you?</label>
+                  <select id="service" name="service">
+                    <option value="Cake &amp; Sweets">Cakes &amp; Sweets</option>
+                    <option value="Floral Design">Floral Design</option>
+                    <option value="Both — Signature" selected>Both — cake + flowers (our signature)</option>
+                    <option value="Gift box">Gift box (Sweets &amp; Stems)</option>
+                    <option value="Not sure yet">Not sure yet — help me decide</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="guests">Approx. guests / servings</label>
+                  <input id="guests" name="guests" type="number" min="1" inputmode="numeric">
+                </div>
+              </div>
+
+              <div class="field">
+                <label for="message">Tell us about your celebration <span class="req" aria-hidden="true">*</span></label>
+                <textarea id="message" name="message" required placeholder="The occasion, your vision, colours, flavours, venue — anything you'd love us to know."></textarea>
+              </div>
+
+              <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+
+              <div style="display:flex;flex-wrap:wrap;gap:1rem;align-items:center">
+                <button class="btn btn--gold" type="submit">Send my inquiry</button>
+                <!-- mailto fallback: works even without Formspree configured -->
+                <a class="link-arrow" href="mailto:hello@bloomandbuttercream.com?subject=New%20inquiry%20from%20the%20website">Prefer email? Write to us directly<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              </div>
+              <p class="form__hint">We'll only use your details to reply to your inquiry. No lists, ever.</p>
+            </form>
+          </div>
+
+          <!-- ============ CONTACT DETAILS ============ -->
+          <aside data-reveal data-delay="1">
+            <h2 style="font-size:var(--step-2)">Say hello</h2>
+            <ul class="info-list" style="margin-top:1.5rem">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+                <span><strong>Email</strong><a href="mailto:hello@bloomandbuttercream.com">hello@bloomandbuttercream.com</a></span> <!-- REPLACE: email -->
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.4-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+                <span><strong>Phone</strong><a href="tel:+10000000000">[Add phone number]</a></span> <!-- REPLACE: phone -->
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                <span><strong>Service area</strong><span>[Your City &amp; surrounding area]</span></span> <!-- REPLACE: service area -->
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+                <span><strong>Studio hours</strong><span>By appointment · Tue–Sat<br>[Confirm your hours]</span></span> <!-- REPLACE: hours -->
+              </li>
+            </ul>
+
+            <h3 style="font-size:var(--step-1);margin-top:2rem">Follow along</h3>
+            <div class="social" style="margin-top:0.8rem">
+              <!-- REPLACE: your real social links -->
+              <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+              <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 9h3V6h-3c-1.7 0-3 1.3-3 3v2H9v3h2v6h3v-6h2.5l.5-3H14V9.5c0-.3.2-.5.5-.5z"/></svg></a>
+              <a href="#" aria-label="Pinterest"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3a9 9 0 0 0-3.3 17.4c-.1-.7-.1-1.9 0-2.7l1.1-4.6s-.3-.6-.3-1.4c0-1.3.8-2.3 1.7-2.3.8 0 1.2.6 1.2 1.3 0 .8-.5 2-.8 3.1-.2.9.5 1.6 1.4 1.6 1.6 0 2.8-1.7 2.8-4.1 0-2.2-1.5-3.7-3.7-3.7a3.9 3.9 0 0 0-4 3.9c0 .8.3 1.6.7 2 .1.1.1.2 0 .3l-.3 1c0 .2-.1.3-.3.2-1.2-.5-1.9-2.2-1.9-3.5 0-2.9 2.1-5.5 6-5.5 3.2 0 5.6 2.3 5.6 5.3 0 3.1-2 5.7-4.7 5.7-.9 0-1.8-.5-2.1-1l-.6 2.2c-.2.8-.8 1.9-1.2 2.5A9 9 0 1 0 12 3z"/></svg></a>
+            </div>
+
+            <div class="divider" style="margin-top:2.5rem;max-width:none" aria-hidden="true">
+              <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6V34"/><path d="M20 14c-6-2-10 0-12 5 6 1 10-1 12-5"/><path d="M20 20c6-2 10 0 12 5-6 1-10-1-12-5"/><path d="M20 27c-5-1-8 0-10 4 5 1 8-1 10-4"/></svg>
+            </div>
+          </aside>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= SHARED FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="index.html" aria-label="Bloom & Buttercream — home">
+            <img class="brand__mark" src="assets/logo-mark.svg" alt="" width="42" height="42">
+            <span class="brand__name">Bloom <span class="amp">&amp;</span> Buttercream</span>
+          </a>
+          <p>Custom cakes &amp; bespoke florals, made by hand from one loving studio — so your celebration comes together as one beautiful vision.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="about.html">About the sisters</a></li>
+            <li><a href="cakes.html">Cakes &amp; Sweets</a></li>
+            <li><a href="flowers.html">Floral Design</a></li>
+            <li><a href="weddings.html">Weddings &amp; Events</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Signature</h4>
+          <ul>
+            <li><a href="weddings.html">The Complete Celebration</a></li>
+            <li><a href="weddings.html">The Wedding Collection</a></li>
+            <li><a href="contact.html">Sweets &amp; Stems gift box</a></li>
+            <li><a href="contact.html">Design consultation</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Visit &amp; inquire</h4>
+          <ul class="info-list">
+            <li><a href="mailto:hello@bloomandbuttercream.com">hello@bloomandbuttercream.com</a></li>
+            <li><span>Serving [Your City &amp; surrounding area]</span></li>
+          </ul>
+          <div class="social" style="margin-top:1.2rem">
+            <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+            <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 9h3V6h-3c-1.7 0-3 1.3-3 3v2H9v3h2v6h3v-6h2.5l.5-3H14V9.5c0-.3.2-.5.5-.5z"/></svg></a>
+            <a href="#" aria-label="Pinterest"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3a9 9 0 0 0-3.3 17.4c-.1-.7-.1-1.9 0-2.7l1.1-4.6s-.3-.6-.3-1.4c0-1.3.8-2.3 1.7-2.3.8 0 1.2.6 1.2 1.3 0 .8-.5 2-.8 3.1-.2.9.5 1.6 1.4 1.6 1.6 0 2.8-1.7 2.8-4.1 0-2.2-1.5-3.7-3.7-3.7a3.9 3.9 0 0 0-4 3.9c0 .8.3 1.6.7 2 .1.1.1.2 0 .3l-.3 1c0 .2-.1.3-.3.2-1.2-.5-1.9-2.2-1.9-3.5 0-2.9 2.1-5.5 6-5.5 3.2 0 5.6 2.3 5.6 5.3 0 3.1-2 5.7-4.7 5.7-.9 0-1.8-.5-2.1-1l-.6 2.2c-.2.8-.8 1.9-1.2 2.5A9 9 0 1 0 12 3z"/></svg></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span data-year>2026</span> Bloom &amp; Buttercream. Handcrafted with love.</p>
+        <p><a href="contact.html">Start your inquiry &rarr;</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <!-- Progressive form handling: AJAX submit to Formspree with a friendly status message.
+       Falls back to a normal form POST if JS is disabled. -->
+  <script>
+    (function () {
+      var form = document.querySelector('.form');
+      var status = document.getElementById('form-status');
+      if (!form || !status) return;
+      form.addEventListener('submit', function (e) {
+        // If the endpoint hasn't been configured yet, let the mailto fallback shine.
+        if (form.action.indexOf('YOUR_FORM_ID') !== -1) {
+          e.preventDefault();
+          status.style.display = 'block';
+          status.textContent = 'This form isn’t connected yet. Please email us at hello@bloomandbuttercream.com and we’ll reply soon.';
+          return;
+        }
+        e.preventDefault();
+        var data = new FormData(form);
+        status.style.display = 'block';
+        status.textContent = 'Sending your inquiry…';
+        fetch(form.action, { method: 'POST', body: data, headers: { Accept: 'application/json' } })
+          .then(function (r) {
+            if (r.ok) {
+              form.reset();
+              status.textContent = 'Thank you! Your inquiry is on its way. We’ll be in touch soon. \u{1F338}';
+            } else {
+              status.textContent = 'Something went wrong. Please email us at hello@bloomandbuttercream.com.';
+            }
+          })
+          .catch(function () {
+            status.textContent = 'Something went wrong. Please email us at hello@bloomandbuttercream.com.';
+          });
+      });
+    })();
+  </script>
+</body>
+</html>

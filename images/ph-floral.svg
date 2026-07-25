@@ -1,0 +1,31 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder">
+  <defs>
+    <linearGradient id="f" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FAF6EF"/><stop offset="1" stop-color="#EAF2F7"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#f)"/>
+  <g transform="translate(400 300) scale(2.5)" fill="none" stroke="#1F2D3D" stroke-opacity="0.55" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <!-- three stems -->
+    <path d="M0 60 C 0 30 0 10 0 -10"/>
+    <path d="M0 40 C -14 26 -24 12 -28 -6"/>
+    <path d="M0 40 C 14 26 24 12 28 -6"/>
+    <!-- leaves -->
+    <path d="M0 34 C -10 32 -18 26 -22 18 C -13 18 -6 22 0 28" stroke="#C8A96A"/>
+    <path d="M0 24 C 10 22 18 16 22 8 C 13 8 6 12 0 18" stroke="#C8A96A"/>
+    <!-- three blooms -->
+    <g transform="translate(0 -22) scale(0.6)">
+      <path d="M0 0 C -10 -13 -6.5 -29 0 -34 C 6.5 -29 10 -13 0 0 Z" transform="rotate(0)"/>
+      <path d="M0 0 C -10 -13 -6.5 -29 0 -34 C 6.5 -29 10 -13 0 0 Z" transform="rotate(72)"/>
+      <path d="M0 0 C -10 -13 -6.5 -29 0 -34 C 6.5 -29 10 -13 0 0 Z" transform="rotate(144)"/>
+      <path d="M0 0 C -10 -13 -6.5 -29 0 -34 C 6.5 -29 10 -13 0 0 Z" transform="rotate(216)"/>
+      <path d="M0 0 C -10 -13 -6.5 -29 0 -34 C 6.5 -29 10 -13 0 0 Z" transform="rotate(288)"/>
+    </g>
+    <g transform="translate(-28 -14) scale(0.4)" stroke="#C8A96A">
+      <circle r="14"/><circle r="6"/>
+    </g>
+    <g transform="translate(28 -14) scale(0.4)" stroke="#C8A96A">
+      <circle r="14"/><circle r="6"/>
+    </g>
+  </g>
+</svg>

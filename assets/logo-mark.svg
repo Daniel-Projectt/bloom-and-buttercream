@@ -1,0 +1,23 @@
+<!-- Bloom & Buttercream — combination mark icon.
+     A fine-line bloom whose swirled centre also reads as a piped buttercream rosette,
+     flanked by two slender leaves. Navy (#1F2D3D) line-art with a soft-gold (#C8A96A) centre. -->
+<svg viewBox="0 0 100 100" role="img" aria-label="Bloom & Buttercream" xmlns="http://www.w3.org/2000/svg">
+  <g fill="none" stroke="#1F2D3D" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Five outer petals (rotated copies of one teardrop) -->
+    <g>
+      <path d="M50 49 C 40 36 43.5 20 50 15 C 56.5 20 60 36 50 49 Z" transform="rotate(0 50 49)"/>
+      <path d="M50 49 C 40 36 43.5 20 50 15 C 56.5 20 60 36 50 49 Z" transform="rotate(72 50 49)"/>
+      <path d="M50 49 C 40 36 43.5 20 50 15 C 56.5 20 60 36 50 49 Z" transform="rotate(144 50 49)"/>
+      <path d="M50 49 C 40 36 43.5 20 50 15 C 56.5 20 60 36 50 49 Z" transform="rotate(216 50 49)"/>
+      <path d="M50 49 C 40 36 43.5 20 50 15 C 56.5 20 60 36 50 49 Z" transform="rotate(288 50 49)"/>
+    </g>
+    <!-- Stem -->
+    <path d="M50 55 V 84"/>
+    <!-- Two slender leaves -->
+    <path d="M50 68 C 42 68 35 73 31 82 C 40 81 47 77 50 70"/>
+    <path d="M50 74 C 58 74 65 79 69 88 C 60 87 53 83 50 76"/>
+  </g>
+  <!-- Piped-rosette swirl at the centre, in gold -->
+  <path d="M50 43 C 45.5 43 42 46.5 42 51 C 42 55.5 45.5 59 50 59 C 55 59 59 55 59 50 C 59 44.5 54.5 40.5 49 41"
+        fill="none" stroke="#C8A96A" stroke-width="2.3" stroke-linecap="round"/>
+</svg>

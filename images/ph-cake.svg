@@ -1,0 +1,21 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder">
+  <defs>
+    <linearGradient id="c" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FAF6EF"/><stop offset="1" stop-color="#EAD1CE"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#c)"/>
+  <g transform="translate(400 300) scale(2.5)" fill="none" stroke="#1F2D3D" stroke-opacity="0.55" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M-70 46 Q 0 64 70 46"/>
+    <rect x="-52" y="4" width="104" height="42" rx="7"/>
+    <path d="M-52 18 Q -39 28 -26 18 Q -13 28 0 18 Q 13 28 26 18 Q 39 28 52 18" stroke="#C8A96A"/>
+    <rect x="-33" y="-30" width="66" height="34" rx="7"/>
+    <g transform="translate(0 -48) scale(0.42)" stroke="#C8A96A">
+      <path d="M0 0 C -10 -13 -6.5 -29 0 -34 C 6.5 -29 10 -13 0 0 Z" transform="rotate(0)"/>
+      <path d="M0 0 C -10 -13 -6.5 -29 0 -34 C 6.5 -29 10 -13 0 0 Z" transform="rotate(72)"/>
+      <path d="M0 0 C -10 -13 -6.5 -29 0 -34 C 6.5 -29 10 -13 0 0 Z" transform="rotate(144)"/>
+      <path d="M0 0 C -10 -13 -6.5 -29 0 -34 C 6.5 -29 10 -13 0 0 Z" transform="rotate(216)"/>
+      <path d="M0 0 C -10 -13 -6.5 -29 0 -34 C 6.5 -29 10 -13 0 0 Z" transform="rotate(288)"/>
+    </g>
+  </g>
+</svg>
