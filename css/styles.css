@@ -231,7 +231,7 @@ p:last-child { margin-bottom: 0; }
   background: rgba(250, 246, 239, 0);
   transition: background 0.4s var(--ease), box-shadow 0.4s var(--ease),
               padding 0.4s var(--ease);
-  padding-block: clamp(0.9rem, 2vw, 1.4rem);
+  padding-block: clamp(0.35rem, 1vw, 0.7rem);
 }
 /* Softens on scroll (toggled by JS) */
 .site-header.is-scrolled {
@@ -244,7 +244,7 @@ p:last-child { margin-bottom: 0; }
 /* Pages with a full-bleed photo hero: light nav + soft scrim while at the top,
    so navigation stays legible over the image. Reverts to dark once scrolled. */
 .has-hero .site-header:not(.is-scrolled) {
-  background: linear-gradient(180deg, rgba(31, 45, 61, 0.42), rgba(31, 45, 61, 0));
+  background: linear-gradient(180deg, rgba(31, 45, 61, 0.58), rgba(31, 45, 61, 0.14));
 }
 .has-hero .site-header:not(.is-scrolled) .brand__name,
 .has-hero .site-header:not(.is-scrolled) .nav-links > li > a { color: var(--cream); }
@@ -255,9 +255,9 @@ p:last-child { margin-bottom: 0; }
 
 .nav {
   display: flex;
+  flex-direction: column;      /* centered crest layout: logo on top, nav below */
   align-items: center;
-  justify-content: space-between;
-  gap: 1.5rem;
+  gap: clamp(0.5rem, 1.4vw, 1rem);
 }
 
 .brand {
@@ -266,20 +266,31 @@ p:last-child { margin-bottom: 0; }
   gap: 0.7rem;
   line-height: 1;
 }
-.brand__mark { width: 42px; height: 42px; flex: none; transition: transform 0.5s var(--ease); }
-.brand:hover .brand__mark { transform: rotate(-8deg); }
-.brand__name {
-  font-family: var(--font-display);
-  font-size: 1.25rem;
-  letter-spacing: 0.01em;
-  color: var(--navy);
-  white-space: nowrap;
+/* Brand logo (stacked lockup PNG, transparent). Navy on cream, cream over dark hero. */
+.brand__logo { height: 104px; width: auto; display: block; flex: none; transition: height 0.4s var(--ease), opacity 0.3s var(--ease); }
+.brand:hover .brand__logo { opacity: 0.82; }
+.brand__logo--light { display: none; }
+/* Over a full-bleed photo hero (page top): swap to the cream logo */
+.has-hero .site-header:not(.is-scrolled) .brand__logo--dark { display: none; }
+.has-hero .site-header:not(.is-scrolled) .brand__logo--light { display: block; }
+/* Condense once the header sticks on scroll */
+.site-header.is-scrolled .brand__logo { height: 64px; }
+/* Footer sits on navy — the cream logo, generous */
+.site-footer .brand__logo { height: 118px; }
+@media (max-width: 860px) {
+  .brand__logo { height: 76px; }
+  .site-header.is-scrolled .brand__logo { height: 56px; }
 }
-.brand__name .amp { font-family: var(--font-script); font-size: 1.4em; color: var(--gold-deep); }
+@media (max-width: 600px) {
+  .brand__logo, .site-header.is-scrolled .brand__logo { height: 58px; }
+  .site-footer .brand__logo { height: 92px; }
+}
 
 .nav-links {
   display: flex;
   align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
   gap: clamp(1rem, 2vw, 1.9rem);
   list-style: none;
 }
@@ -842,6 +853,8 @@ figcaption.ph-note {
 }
 
 @media (max-width: 860px) {
+  /* back to a single row: logo left, hamburger right */
+  .nav { flex-direction: row; justify-content: space-between; align-items: center; }
   .nav-links {
     position: fixed;
     inset: 0 0 0 auto;
